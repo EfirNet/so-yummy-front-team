@@ -45,10 +45,10 @@ export const App = () => {
       dispatch(setAccessToken(accessToken));
       dispatch(authOperations.getCurrentUser());
       if (
-        location.pathname === '/yummy-app-front/signin' ||
-        location.pathname === '/yummy-app-front/register'
+        location.pathname === '/signin' ||
+        location.pathname === '/register'
       ) {
-        location.pathname = '/yummy-app-front/main';
+        location.pathname = '/main';
       }
     }
   }, [accessToken, dispatch, location]);
