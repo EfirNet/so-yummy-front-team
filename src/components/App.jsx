@@ -45,10 +45,10 @@ export const App = () => {
       dispatch(setAccessToken(accessToken));
       dispatch(authOperations.getCurrentUser());
       if (
-        location.pathname === '/signin' ||
-        location.pathname === '/register'
+        location.pathname === 'https://so-yummy.vercel.app/signin' ||
+        location.pathname === 'https://so-yummy.vercel.app/register'
       ) {
-        location.pathname = '/main';
+        location.pathname = 'https://so-yummy.vercel.app/main';
       }
     }
   }, [accessToken, dispatch, location]);
@@ -56,7 +56,7 @@ export const App = () => {
   // TODO remove /yummy-app-front/ feom location.pathname deploy at Netlify
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="https://so-yummy.vercel.app">
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<PublicRoute />}>
