@@ -56,7 +56,7 @@ export const App = () => {
   // TODO remove /yummy-app-front/ feom location.pathname deploy at Netlify
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<PublicRoute />}>
